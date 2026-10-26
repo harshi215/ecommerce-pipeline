@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Raw data (downloaded from Kaggle, not committed)
+data/raw/
+data/processed/
+.venv/
+.env
