@@ -16,3 +16,10 @@
 - A later step can use an earlier step's name, so a long query can be built in parts.
 - The final SELECT after the last step produces the output.
 - I'd use a CTE when a query is hard to read in one piece, or when I need the same intermediate result twice.
+
+## Day 3 :subqueries and NOT EXISTS practice
+## Day 3: Subqueries (Nov 7)
+
+- Scalar subquery: returns exactly one value. Runs once and is used by the outer query. Used in WHERE or SELECT. Error if it returns more than one row.
+- Correlated subquery: refers to a column from the outer query, so it's run once per outer row. Use it to compare each row with its own group (e.g., each order vs its customer's average).
+- EXISTS: returns true if the subquery finds at least one row. NOT EXISTS returns true if it finds none. It stops at the first match, so it's efficient.
