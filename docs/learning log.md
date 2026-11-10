@@ -23,3 +23,11 @@
 - Scalar subquery: returns exactly one value. Runs once and is used by the outer query. Used in WHERE or SELECT. Error if it returns more than one row.
 - Correlated subquery: refers to a column from the outer query, so it's run once per outer row. Use it to compare each row with its own group (e.g., each order vs its customer's average).
 - EXISTS: returns true if the subquery finds at least one row. NOT EXISTS returns true if it finds none. It stops at the first match, so it's efficient.
+
+## Day 4: Joins
+
+- An INNER JOIN keeps only rows that have a match in both tables. A row with no match is dropped.
+- A LEFT JOIN keeps every row from the left table. If the right table has no match, the right-side columns show NULL.
+- The ON clause says which columns must match between the two tables.
+- To find rows with no partner in another table, use a LEFT JOIN and filter for NULL with IS NULL.
+- A condition that compares to NULL needs IS NULL, because = NULL never matches anything.
