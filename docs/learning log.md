@@ -31,3 +31,10 @@
 - The ON clause says which columns must match between the two tables.
 - To find rows with no partner in another table, use a LEFT JOIN and filter for NULL with IS NULL.
 - A condition that compares to NULL needs IS NULL, because = NULL never matches anything.
+
+## Day 5: RIGHT, FULL, and self joins
+
+- A RIGHT JOIN keeps every row from the right table. It works the same as a LEFT JOIN with the tables swapped, so I can always write it as a LEFT JOIN.
+- A FULL OUTER JOIN keeps rows from both tables. Where one side has no match, that side shows NULL.
+- A self join joins a table to itself. I give each copy a different alias, such as s1 and s2.
+- In a self join, s1.id < s2.id stops a row from matching itself and removes duplicate pairs.
