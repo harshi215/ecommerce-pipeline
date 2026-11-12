@@ -38,3 +38,10 @@
 - A FULL OUTER JOIN keeps rows from both tables. Where one side has no match, that side shows NULL.
 - A self join joins a table to itself. I give each copy a different alias, such as s1 and s2.
 - In a self join, s1.id < s2.id stops a row from matching itself and removes duplicate pairs.
+
+## Day 6: GROUP BY, HAVING, and window review
+
+- GROUP BY collapses rows into one row per group. Every selected column must be in the GROUP BY or inside an aggregate like SUM or COUNT.
+- WHERE filters rows before grouping. HAVING filters groups after aggregation, so I use HAVING for conditions like COUNT(*) > 100.
+- A window function keeps every row. GROUP BY collapses them.
+- I can't filter a window function directly in WHERE, so I put it in a CTE first, then filter in the outer query.
